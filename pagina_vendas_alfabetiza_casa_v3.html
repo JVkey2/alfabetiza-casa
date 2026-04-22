@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alfabetiza Casa — Seu filho merece uma chance de verdade</title>
+<meta name="description" content="O método que está transformando mães comuns nas melhores professoras dos próprios filhos. 15 minutos por dia. Resultado em 30 dias.">
+
+<!-- PIXEL META -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'SEU_PIXEL_ID');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {
+  content_name: 'Alfabetiza Casa',
+  content_category: 'Ebook Educacao',
+  value: 27.00,
+  currency: 'BRL'
+});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+:root{
+  --blue:#1E3A8A;
+  --blue-mid:#2B50C8;
+  --blue-light:#EEF2FF;
+  --yellow:#F59E0B;
+  --yellow-deep:#D97706;
+  --yellow-light:#FEF3C7;
+  --coral:#EF4444;
+  --coral-soft:#FEE2E2;
+  --cream:#FFFBF0;
+  --ink:#111827;
+  --gray:#6B7280;
+  --gray-light:#F3F4F6;
+  --white:#ffffff;
+}
+
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:'DM Sans',sans-serif;
+  color:var(--ink);
+  background:var(--white);
+  overflow-x:hidden;
+  line-height:1.6;
+}
+
+h1,h2,h3,h4{
+  font-family:'Lora',Georgia,serif;
+  line-height:1.1;
+}
+
+.container{
+  max-width:660px;
+  margin:0 auto;
+  padding:0 22px;
+}
+
+/* ======= URGENCY BAR ======= */
+.urgency-bar{
+  background:var(--ink);
+  color:white;
+  text-align:center;
+  padding:11px 20px;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:0.3px;
+  position:sticky;
+  top:0;
+  z-index:999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+.urgency-pulse{
+  width:8px;height:8px;
+  background:var(--coral);
+  border-radius:50%;
+  animation:pulse 1.2s infinite;
+  flex-shrink:0;
+}
+@keyframes pulse{
+  0%,100%{transform:scale(1);opacity:1;}
+  50%{transform:scale(1.5);opacity:0.5;}
+}
+.urgency-bar .timer{
+  background:var(--yellow);
+  color:var(--blue);
+  padding:2px 10px;
+  border-radius:20px;
+  font-weight:900;
+  font-size:13px;
+  font-variant-numeric:tabular-nums;
+}
+
+/* ======= HERO EMOCIONAL ======= */
+.hero{
+  background:var(--blue);
+  padding:0;
+  position:relative;
+  overflow:hidden;
+}
+.hero-story{
+  padding:50px 0 0;
+  position:relative;
+  z-index:2;
+}
+.hero::before{
+  content:'';
+  position:absolute;
+  top:-100px;right:-100px;
+  width:350px;height:350px;
+  background:radial-gradient(circle,rgba(245,158,11,0.2) 0%,transparent 70%);
+  border-radius:50%;
+}
+.hero::after{
+  content:'';
+  position:absolute;
+  bottom:-60px;left:-80px;
+  width:250px;height:250px;
+  background:radial-gradient(circle,rgba(239,68,68,0.15) 0%,transparent 70%);
+  border-radius:50%;
+}
+
+/* ABERTURA EMOCIONAL */
+.opening-quote{
+  font-family:'Lora',serif;
+  font-size:13px;
+  font-style:italic;
+  color:rgba(255,255,255,0.5);
+  letter-spacing:1px;
+  margin-bottom:20px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.opening-quote::before{
+  content:'';
+  display:block;
+  width:30px;
+  height:1px;
+  background:var(--yellow);
+  flex-shrink:0;
+}
+
+.hero h1{
+  font-size:clamp(28px,5vw,40px);
+  color:white;
+  margin-bottom:20px;
+  letter-spacing:-0.5px;
+  font-weight:700;
+}
+.hero h1 em{
+  color:var(--yellow);
+  font-style:italic;
+}
+.hero h1 .line-break{display:block;}
+
+/* STORIA */
+.story-block{
+  background:rgba(255,255,255,0.06);
+  border-left:3px solid var(--yellow);
+  padding:20px 22px;
+  margin:24px 0;
+  border-radius:0 12px 12px 0;
+}
+.story-block p{
+  font-size:15px;
+  color:rgba(255,255,255,0.85);
+  line-height:1.75;
+  margin-bottom:10px;
+}
+.story-block p:last-child{margin-bottom:0;}
+.story-block strong{color:var(--yellow);}
+
+/* HERO VISUAL */
+.hero-visual{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:20px 20px 0 0;
+  padding:28px 24px 0;
+  margin-top:32px;
+  text-align:center;
+}
+.hero-visual .kit-label{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--yellow);
+  margin-bottom:14px;
+}
+.hero-visual .kit-title{
+  font-family:'Lora',serif;
+  font-size:clamp(36px,6vw,52px);
+  font-weight:700;
+  color:white;
+  line-height:1;
+  margin-bottom:6px;
+}
+.hero-visual .kit-title span{color:var(--yellow);font-style:italic;}
+.hero-visual .kit-sub{
+  font-size:13px;
+  color:rgba(255,255,255,0.5);
+  margin-bottom:20px;
+}
+.kit-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  justify-content:center;
+  padding-bottom:28px;
+}
+.kit-tag{
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.1);
+  color:rgba(255,255,255,0.8);
+  font-size:11px;
+  padding:5px 12px;
+  border-radius:20px;
+  font-weight:500;
+}
+
+/* CTA */
+.cta-wrap{
+  padding:24px 0;
+}
+.btn-main{
+  display:block;
+  background:linear-gradient(135deg,var(--yellow) 0%,var(--yellow-deep) 100%);
+  color:var(--blue);
+  font-family:'DM Sans',sans-serif;
+  font-size:17px;
+  font-weight:700;
+  padding:20px 24px;
+  border-radius:14px;
+  text-align:center;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  box-shadow:0 6px 0 #92400E,0 10px 30px rgba(0,0,0,0.25);
+  transition:all 0.15s ease;
+  letter-spacing:-0.2px;
+  position:relative;
+  overflow:hidden;
+  width:100%;
+}
+.btn-main::after{
+  content:'';
+  position:absolute;
+  top:0;left:-100%;
+  width:50%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent);
+  animation:shine 2.5s infinite;
+}
+@keyframes shine{100%{left:200%;}}
+.btn-main:hover{
+  transform:translateY(3px);
+  box-shadow:0 3px 0 #92400E,0 6px 16px rgba(0,0,0,0.2);
+}
+.btn-main small{
+  display:block;
+  font-size:11px;
+  font-weight:500;
+  opacity:0.7;
+  margin-top:5px;
+  letter-spacing:0.5px;
+}
+
+.trust-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  margin-top:16px;
+  justify-content:center;
+}
+.trust-item{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:12px;
+  color:rgba(255,255,255,0.6);
+  font-weight:500;
+}
+.trust-item .check{
+  width:16px;height:16px;
+  background:var(--yellow);
+  color:var(--blue);
+  border-radius:50%;
+  display:inline-flex;
+  align-items:center;justify-content:center;
+  font-size:9px;font-weight:900;
+  flex-shrink:0;
+}
+
+/* ======= SEÇÕES ======= */
+section{padding:56px 0;}
+section.cream{background:var(--cream);}
+section.blue-light{background:var(--blue-light);}
+
+.eyebrow{
+  display:inline-block;
+  font-size:10px;font-weight:700;
+  letter-spacing:3px;text-transform:uppercase;
+  color:var(--coral);
+  background:var(--coral-soft);
+  padding:5px 12px;
+  border-radius:20px;
+  margin-bottom:14px;
+}
+
+.section-h{
+  font-size:clamp(22px,4vw,30px);
+  letter-spacing:-0.5px;
+  margin-bottom:14px;
+  color:var(--blue);
+  font-weight:700;
+}
+.section-h em{color:var(--coral);font-style:italic;}
+
+.body-text{
+  font-size:15px;
+  line-height:1.75;
+  color:var(--gray);
+  margin-bottom:14px;
+}
+.body-text strong{color:var(--blue);font-weight:700;}
+
+/* ======= BEFORE/AFTER EMOCIONAL ======= */
+.ba-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin:24px 0;
+}
+.ba-card{
+  border-radius:14px;
+  padding:20px 16px;
+}
+.ba-card.before{
+  background:var(--coral-soft);
+  border:1.5px solid #FECACA;
+}
+.ba-card.after{
+  background:#ECFDF5;
+  border:1.5px solid #A7F3D0;
+}
+.ba-label{
+  font-size:10px;font-weight:900;
+  letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:12px;
+  display:flex;align-items:center;gap:6px;
+}
+.ba-card.before .ba-label{color:var(--coral);}
+.ba-card.after .ba-label{color:#059669;}
+.ba-item{
+  font-size:13px;
+  line-height:1.5;
+  margin-bottom:8px;
+  padding-left:18px;
+  position:relative;
+  color:var(--ink);
+}
+.ba-item::before{
+  position:absolute;left:0;top:2px;
+  font-size:11px;font-weight:900;
+}
+.ba-card.before .ba-item::before{content:'✗';color:var(--coral);}
+.ba-card.after .ba-item::before{content:'✓';color:#059669;}
+
+/* ======= DEPOIMENTOS ======= */
+.testimonials{display:flex;flex-direction:column;gap:14px;margin:24px 0;}
+.testimonial{
+  background:white;
+  border-radius:14px;
+  padding:20px;
+  border:1.5px solid var(--gray-light);
+  position:relative;
+  box-shadow:0 2px 12px rgba(0,0,0,0.05);
+}
+.testimonial::before{
+  content:'"';
+  position:absolute;
+  top:-10px;left:16px;
+  font-family:'Lora',serif;
+  font-size:60px;
+  color:var(--yellow);
+  line-height:1;
+}
+.testimonial-text{
+  font-size:14px;
+  line-height:1.65;
+  color:var(--ink);
+  font-style:italic;
+  margin-bottom:14px;
+  padding-top:8px;
+}
+.testimonial-author{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.author-avatar{
+  width:38px;height:38px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--blue) 0%,var(--blue-mid) 100%);
+  color:white;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:14px;
+  flex-shrink:0;
+}
+.author-name{
+  font-size:13px;font-weight:700;color:var(--blue);
+  display:block;
+}
+.author-desc{
+  font-size:11px;color:var(--gray);
+}
+.stars{color:var(--yellow);font-size:13px;margin-bottom:6px;}
+
+/* ======= PAIN CARDS ======= */
+.pain-cards{display:flex;flex-direction:column;gap:10px;margin:20px 0;}
+.pain-card{
+  background:white;
+  border-left:3px solid var(--coral);
+  border-radius:0 12px 12px 0;
+  padding:16px 18px;
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  box-shadow:0 2px 12px rgba(0,0,0,0.05);
+}
+.pain-icon{
+  width:22px;height:22px;
+  background:var(--coral);
+  color:white;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:900;
+  flex-shrink:0;margin-top:1px;
+}
+.pain-text{
+  font-size:14px;line-height:1.55;color:var(--ink);
+}
+
+/* ======= MÉTODO VISUAL ======= */
+.method-steps{display:flex;flex-direction:column;gap:0;margin:24px 0;}
+.method-step{
+  display:flex;gap:16px;
+  padding:18px 0;
+  border-bottom:1px dashed var(--gray-light);
+  align-items:flex-start;
+}
+.method-step:last-child{border-bottom:none;}
+.step-num{
+  width:40px;height:40px;
+  background:var(--blue);
+  color:white;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Lora',serif;
+  font-size:18px;font-weight:700;
+  flex-shrink:0;
+  box-shadow:0 3px 0 var(--yellow-deep);
+}
+.step-body{}
+.step-title{
+  font-size:15px;font-weight:700;
+  color:var(--blue);margin-bottom:4px;
+}
+.step-desc{font-size:13px;color:var(--gray);line-height:1.5;}
+.step-time{
+  display:inline-block;
+  background:var(--yellow-light);
+  color:var(--yellow-deep);
+  font-size:10px;font-weight:700;
+  padding:2px 8px;border-radius:10px;
+  margin-top:6px;
+}
+
+/* ======= DELIVERABLES ======= */
+.deliverables{display:flex;flex-direction:column;gap:12px;margin:24px 0;}
+.deliverable{
+  background:white;
+  border:1.5px solid var(--gray-light);
+  border-radius:14px;
+  padding:18px;
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  transition:all 0.2s;
+}
+.deliverable:hover{
+  border-color:var(--yellow);
+  transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(0,0,0,0.07);
+}
+.del-badge{
+  width:46px;height:46px;
+  background:var(--yellow);
+  color:var(--blue);
+  border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Lora',serif;
+  font-size:20px;font-weight:700;
+  flex-shrink:0;
+  box-shadow:0 3px 0 var(--yellow-deep);
+}
+.del-content{}
+.del-eyebrow{
+  font-size:9px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;
+  color:var(--coral);margin-bottom:3px;
+}
+.del-title{
+  font-size:15px;font-weight:700;
+  color:var(--blue);margin-bottom:5px;
+  line-height:1.2;
+}
+.del-desc{font-size:13px;color:var(--gray);line-height:1.5;}
+.del-tag{
+  display:inline-block;
+  background:var(--blue-light);
+  color:var(--blue);
+  font-size:10px;font-weight:700;
+  padding:3px 8px;border-radius:8px;
+  margin-top:6px;
+}
+
+/* ======= BONUS ======= */
+.bonus-wrap{
+  border-radius:16px;
+  overflow:hidden;
+  margin:14px 0;
+  position:relative;
+}
+.bonus-ribbon{
+  position:absolute;
+  top:16px;right:-28px;
+  background:var(--yellow);
+  color:var(--blue);
+  font-size:9px;font-weight:900;
+  letter-spacing:1.5px;
+  padding:5px 32px;
+  transform:rotate(45deg);
+  z-index:2;
+}
+.bonus-body{
+  padding:24px 22px;
+  color:white;
+}
+.bonus-body.coral{background:linear-gradient(135deg,#EF4444 0%,#B91C1C 100%);}
+.bonus-body.navy{background:linear-gradient(135deg,#1E3A8A 0%,#1E40AF 100%);}
+.bonus-body h3{font-size:20px;margin-bottom:8px;}
+.bonus-body p{font-size:13px;opacity:0.9;line-height:1.6;margin-bottom:16px;}
+.bonus-item{
+  display:flex;align-items:center;gap:12px;
+  background:rgba(255,255,255,0.1);
+  border-radius:10px;
+  padding:12px 14px;
+}
+.bonus-emoji{font-size:22px;flex-shrink:0;}
+.bonus-item-text strong{display:block;font-size:14px;margin-bottom:2px;}
+.bonus-item-text span{font-size:12px;opacity:0.8;}
+
+/* ======= OFERTA ======= */
+.offer-card{
+  background:white;
+  border-radius:20px;
+  padding:32px 24px;
+  border:3px solid var(--yellow);
+  box-shadow:0 20px 60px rgba(0,0,0,0.1);
+  position:relative;
+  margin:28px 0;
+  text-align:center;
+}
+.offer-card::before{
+  content:'OFERTA DE LANÇAMENTO';
+  position:absolute;
+  top:-16px;left:50%;
+  transform:translateX(-50%);
+  background:var(--coral);
+  color:white;
+  padding:6px 18px;
+  font-size:10px;font-weight:700;
+  letter-spacing:2px;
+  border-radius:20px;
+  white-space:nowrap;
+}
+.offer-card h3{
+  font-size:22px;color:var(--blue);
+  margin:10px 0 22px;
+}
+.offer-list{
+  list-style:none;
+  border-top:1px solid var(--gray-light);
+  border-bottom:1px solid var(--gray-light);
+  padding:14px 0;margin-bottom:22px;
+  text-align:left;
+}
+.offer-list li{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:7px 0;font-size:13px;
+}
+.offer-list li strong{color:var(--blue);font-weight:600;}
+.offer-list li span{color:var(--gray);text-decoration:line-through;font-size:12px;}
+
+.price-area{text-align:center;margin:20px 0;}
+.price-was{
+  font-size:13px;color:var(--gray);
+  text-decoration:line-through;margin-bottom:4px;
+}
+.price-label{
+  font-size:11px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;
+  color:var(--coral);margin-bottom:6px;
+}
+.price-now{
+  font-family:'Lora',serif;
+  font-size:72px;font-weight:700;
+  color:var(--blue);line-height:1;
+  letter-spacing:-2px;
+}
+.price-now sup{
+  font-size:22px;color:var(--coral);
+  vertical-align:super;
+  font-family:'DM Sans',sans-serif;
+  margin-right:2px;
+}
+.price-now sub{
+  font-size:22px;vertical-align:sub;
+  font-family:'DM Sans',sans-serif;
+}
+.price-install{
+  font-size:13px;color:var(--gray);margin-top:8px;
+}
+.price-install strong{color:var(--blue);}
+
+.payment-row{
+  font-size:12px;color:var(--gray);
+  margin-top:14px;padding-top:14px;
+  border-top:1px solid var(--gray-light);
+}
+
+/* ======= GARANTIA ======= */
+.guarantee{
+  background:var(--yellow-light);
+  border:2px dashed var(--yellow);
+  border-radius:16px;
+  padding:28px 22px;text-align:center;
+  margin:32px 0;
+}
+.guarantee-num{
+  width:62px;height:62px;
+  background:var(--yellow);color:var(--blue);
+  border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-family:'Lora',serif;font-size:26px;font-weight:700;
+  margin-bottom:14px;
+  box-shadow:0 4px 0 var(--yellow-deep);
+}
+.guarantee h3{font-size:22px;color:var(--blue);margin-bottom:10px;}
+.guarantee p{font-size:14px;line-height:1.65;color:var(--gray);max-width:440px;margin:0 auto;}
+
+/* ======= FAQ ======= */
+.faq{margin:20px 0;}
+.faq-item{
+  background:white;
+  border:1.5px solid var(--gray-light);
+  border-radius:12px;margin-bottom:10px;
+  overflow:hidden;cursor:pointer;
+  transition:border-color 0.2s;
+}
+.faq-item:hover{border-color:var(--blue-mid);}
+.faq-q{
+  padding:18px 20px;
+  font-size:14px;font-weight:700;color:var(--blue);
+  display:flex;justify-content:space-between;
+  align-items:center;gap:12px;user-select:none;
+}
+.faq-q::after{
+  content:'+';font-size:22px;color:var(--coral);
+  font-weight:900;transition:transform 0.2s;flex-shrink:0;
+}
+.faq-item.open .faq-q::after{transform:rotate(45deg);}
+.faq-a{
+  max-height:0;overflow:hidden;
+  transition:max-height 0.3s ease,padding 0.3s;
+  padding:0 20px;
+}
+.faq-item.open .faq-a{max-height:300px;padding:0 20px 18px;}
+.faq-a p{font-size:14px;line-height:1.65;color:var(--gray);}
+
+/* ======= FINAL CTA EMOCIONAL ======= */
+.final-cta{
+  background:linear-gradient(180deg,var(--blue) 0%,#0F2463 100%);
+  color:white;padding:64px 0;
+  text-align:center;position:relative;overflow:hidden;
+}
+.final-cta::before{
+  content:'';
+  position:absolute;top:-80px;right:-80px;
+  width:280px;height:280px;
+  background:radial-gradient(circle,rgba(245,158,11,0.2) 0%,transparent 70%);
+  border-radius:50%;
+}
+.final-cta::after{
+  content:'';
+  position:absolute;bottom:-60px;left:-60px;
+  width:200px;height:200px;
+  background:radial-gradient(circle,rgba(239,68,68,0.15) 0%,transparent 70%);
+  border-radius:50%;
+}
+.final-cta-inner{position:relative;z-index:2;}
+.final-quote{
+  font-family:'Lora',serif;
+  font-size:clamp(20px,4vw,28px);
+  font-style:italic;
+  color:white;
+  line-height:1.4;
+  margin-bottom:10px;
+  letter-spacing:-0.3px;
+}
+.final-quote em{color:var(--yellow);}
+.final-sub{
+  font-size:15px;color:rgba(255,255,255,0.65);
+  margin-bottom:30px;line-height:1.6;
+}
+.final-sub strong{color:white;}
+.final-cta .btn-main{
+  max-width:420px;margin:0 auto;
+}
+
+/* ======= FOOTER ======= */
+footer{
+  background:var(--ink);color:white;
+  padding:32px 0;text-align:center;
+}
+footer p{font-size:12px;opacity:0.45;margin-bottom:6px;line-height:1.6;}
+footer a{color:var(--yellow);text-decoration:none;}
+
+/* ======= DIVIDER ======= */
+.divider{
+  display:flex;align-items:center;gap:12px;margin:32px 0;
+}
+.divider-line{flex:1;height:1px;background:var(--gray-light);}
+.divider-icon{
+  width:28px;height:28px;
+  background:var(--yellow);color:var(--blue);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;flex-shrink:0;
+}
+
+/* ======= FADE IN ======= */
+.fade-in{
+  opacity:0;transform:translateY(20px);
+  transition:opacity 0.6s ease,transform 0.6s ease;
+}
+.fade-in.visible{opacity:1;transform:translateY(0);}
+
+/* ======= RESPONSIVE ======= */
+@media(min-width:640px){
+  .hero h1{font-size:42px;}
+  .hero-visual .kit-title{font-size:54px;}
+  .price-now{font-size:84px;}
+}
+</style>
+</head>
+<body>
+
+<!-- URGENCY BAR -->
+<div class="urgency-bar">
+  <span class="urgency-pulse"></span>
+  Oferta de lançamento — preço sobe em breve
+  <span class="timer" id="timer">23:59:59</span>
+</div>
+
+<!-- ======= HERO ======= -->
+<section class="hero">
+  <div class="container hero-story">
+
+    <p class="opening-quote">Uma história que talvez seja a sua também</p>
+
+    <h1>
+      Ela chorava escondida no banheiro
+      <em class="line-break">porque o filho não conseguia ler.</em>
+    </h1>
+
+    <div class="story-block">
+      <p>Era toda noite a mesma cena. O caderno aberto na mesa, o lápis parado, o filho com os olhos marejados dizendo <strong>"mãe, eu sou burro."</strong></p>
+      <p>Ela tinha tentado tudo. Reforço. Apostila. YouTube. E nada. Nada funcionava. E a cada dia que passava, ela sentia que <strong>a culpa era dela.</strong></p>
+      <p>Até que ela descobriu que o problema nunca tinha sido o filho. E nunca tinha sido ela. Era o <strong>método errado sendo aplicado do jeito errado.</strong></p>
+      <p>Em 21 dias, o mesmo menino que chorava na frente do caderno estava lendo a placa do supermercado em voz alta no banco de trás do carro.</p>
+    </div>
+
+    <div class="hero-visual">
+      <div class="kit-label">Método Completo · 5 Materiais</div>
+      <div class="kit-title">Alfabetiza<br><span>Casa</span></div>
+      <div class="kit-sub">O método que devolveu a autoestima de centenas de crianças</div>
+      <div class="kit-tags">
+        <span class="kit-tag">📘 Ebook Método</span>
+        <span class="kit-tag" style="background:rgba(245,158,11,0.2);border-color:var(--yellow);color:var(--yellow);">🎁 Bônus: Carta pra Mãe</span>
+      </div>
+    </div>
+
+    <div class="cta-wrap">
+      <a href="https://pay.cakto.com.br/g65iu2v_857377"
+         class="btn-main"
+         onclick="fbq&&fbq('track','InitiateCheckout',{value:27,currency:'BRL'})">
+        QUERO MEU FILHO APRENDENDO AGORA
+        <small>🔒 Acesso imediato · Pagamento 100% seguro</small>
+      </a>
+      <div class="trust-row">
+        <span class="trust-item"><span class="check">✓</span> Acesso imediato</span>
+        <span class="trust-item"><span class="check">✓</span> Garantia 7 dias</span>
+        <span class="trust-item"><span class="check">✓</span> Para 4 a 8 anos</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ======= IDENTIFICAÇÃO ======= -->
+<section class="cream fade-in">
+  <div class="container">
+    <span class="eyebrow">Você se reconhece aqui?</span>
+    <h2 class="section-h">Essas cenas acontecem <em>toda semana</em> na sua casa?</h2>
+
+    <div class="pain-cards">
+      <div class="pain-card">
+        <div class="pain-icon">✗</div>
+        <div class="pain-text">Você senta pra fazer tarefa com seu filho e em 5 minutos os dois estão frustrados — ele chora, você respira fundo pra não explodir</div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">✗</div>
+        <div class="pain-text">A professora manda bilhete dizendo que ele "precisa de atenção especial" — e você nem sabe por onde começar</div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">✗</div>
+        <div class="pain-text">Você gastou com reforço, fonoaudiólogo, psicopedagogo — e o resultado ainda não apareceu</div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">✗</div>
+        <div class="pain-text">Seu filho olhou pra você e disse "mãe, eu sou burro" — e aquelas três palavras te quebram por dentro até hoje</div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">✗</div>
+        <div class="pain-text">Você compara com o filho da vizinha, da colega, da cunhada — e aquela dor no peito aperta mais a cada comparação</div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">✗</div>
+        <div class="pain-text">Você chora escondido porque sente que tá falhando — e não pode falar isso pra ninguém porque "tem que ser forte"</div>
+      </div>
+    </div>
+
+    <p class="body-text" style="margin-top:20px;font-size:16px;"><strong>Se você aceneu pra qualquer uma dessas cenas — continue lendo.</strong> Porque o que eu vou te contar agora vai mudar completamente como você enxerga essa situação.</p>
+  </div>
+</section>
+
+<!-- ======= A VERDADE ======= -->
+<section class="fade-in">
+  <div class="container">
+    <span class="eyebrow">A verdade que ninguém te conta</span>
+    <h2 class="section-h">O problema <em>nunca foi</em> o seu filho.</h2>
+
+    <p class="body-text">Enquanto você acreditar que o problema é seu filho, você vai continuar tentando "consertar" algo que não está quebrado.</p>
+
+    <p class="body-text">Seu filho não é lento. Não é preguiçoso. Não é menos inteligente que os outros.</p>
+
+    <p class="body-text"><strong>Ele só não recebeu o estímulo certo, no jeito certo, na ordem certa.</strong></p>
+
+    <p class="body-text">A escola pública brasileira tem turmas de 30 crianças. Uma professora. Zero tempo pra olhar individualmente pra cada uma. O método que usam foi desenhado pra uma média — e sua criança não é uma média, ela é única.</p>
+
+    <div style="background:var(--blue);color:white;border-radius:16px;padding:28px 24px;margin:24px 0;">
+      <p style="font-family:'Lora',serif;font-size:18px;font-style:italic;line-height:1.6;color:white;">
+        "Cerca de 20% das crianças brasileiras chegam ao 3º ano do fundamental sem saber ler com fluência — não porque são incapazes, mas porque o método falhou com elas."
+      </p>
+      <p style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:10px;letter-spacing:1px;">INEP — Instituto Nacional de Estudos e Pesquisas Educacionais</p>
+    </div>
+
+    <p class="body-text">O seu filho pode estar nesse grupo. E <strong>a solução não está na escola.</strong> Está em você.</p>
+  </div>
+</section>
+
+<!-- ======= ANTES E DEPOIS ======= -->
+<section class="cream fade-in">
+  <div class="container">
+    <span class="eyebrow">A transformação</span>
+    <h2 class="section-h">A diferença entre <em>antes e depois</em> do método</h2>
+    <p class="body-text">Mães que aplicaram o Alfabetiza Casa descrevem a transformação assim:</p>
+
+    <div class="ba-grid">
+      <div class="ba-card before">
+        <div class="ba-label">✗ Antes</div>
+        <div class="ba-item">Choro toda noite</div>
+        <div class="ba-item">Filho com baixa autoestima</div>
+        <div class="ba-item">Reforço caro sem resultado</div>
+        <div class="ba-item">Mãe se sentindo culpada</div>
+        <div class="ba-item">Brigas por causa de tarefa</div>
+      </div>
+      <div class="ba-card after">
+        <div class="ba-label">✓ Depois</div>
+        <div class="ba-item">Filho pede pra estudar</div>
+        <div class="ba-item">Orgulho e confiança</div>
+        <div class="ba-item">15 min em casa resolvem</div>
+        <div class="ba-item">Mãe se sentindo capaz</div>
+        <div class="ba-item">Momento especial juntos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= DEPOIMENTOS ======= -->
+<section class="fade-in">
+  <div class="container">
+    <span class="eyebrow">Histórias reais</span>
+    <h2 class="section-h">O que as mães <em>estão dizendo</em></h2>
+
+    <div class="testimonials">
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">Meu filho tinha 7 anos e ainda trocava letras. A professora já tinha sugerido avaliação neurológica. Apliquei o método por 3 semanas e ele leu uma frase inteira sozinho. Chorei muito naquele dia.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div>
+            <span class="author-name">Ana Paula, 34 anos</span>
+            <span class="author-desc">Mãe do Miguel, 7 anos · São Paulo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">Eu achava que não tinha jeito de ensinar porque não sou professora. O guia de bolso me salvou — toda vez que ele travava, eu sabia exatamente o que fazer. Em 30 dias ele estava lendo plaquinha de rua.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">C</div>
+          <div>
+            <span class="author-name">Camila, 29 anos</span>
+            <span class="author-desc">Mãe do Pedro, 6 anos · Belo Horizonte</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">O que mais me pegou foi o diário de progresso. A gente preencheu junto e virou um ritual. Hoje minha filha pede ela mesma pra sentar e estudar. Não preciso mais pedir.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">F</div>
+          <div>
+            <span class="author-name">Fernanda, 31 anos</span>
+            <span class="author-desc">Mãe da Sofia, 5 anos · Recife</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======= O MÉTODO ======= -->
+<section class="cream fade-in">
+  <div class="container">
+    <span class="eyebrow">Como funciona</span>
+    <h2 class="section-h">O método em <em>7 etapas</em> que realmente funciona</h2>
+    <p class="body-text">Baseado na abordagem fônica — a mais eficiente do mundo pra alfabetização infantil. Em vez de decorar letras, a criança aprende os <strong>sons</strong> e descobre que juntá-los vira palavra.</p>
+
+    <div class="method-steps">
+      <div class="method-step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-title">Consciência dos sons</div>
+          <div class="step-desc">Antes de qualquer letra, a criança aprende que palavras são feitas de sons separados.</div>
+          <span class="step-time">⏱ 5 a 7 dias</span>
+        </div>
+      </div>
+      <div class="method-step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-title">As vogais pelo som</div>
+          <div class="step-desc">A, E, I, O, U apresentadas como sons — não como letras decoradas.</div>
+          <span class="step-time">⏱ 5 dias</span>
+        </div>
+      </div>
+      <div class="method-step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-title">As primeiras consoantes</div>
+          <div class="step-desc">M, P, B, T, D — na ordem certa, pelo som, com exemplos da vida real.</div>
+          <span class="step-time">⏱ 3 a 6 semanas</span>
+        </div>
+      </div>
+      <div class="method-step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <div class="step-title">Juntando sons — as sílabas</div>
+          <div class="step-desc">O momento mágico: MA + MA = MAMÃE. Aqui o clique acontece.</div>
+          <span class="step-time">⏱ 10 a 15 dias</span>
+        </div>
+      </div>
+      <div class="method-step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <div class="step-title">Palavras reais</div>
+          <div class="step-desc">Bolo, pato, vovó, bebê — palavras que a criança conhece do dia a dia.</div>
+          <span class="step-time">⏱ 10 dias</span>
+        </div>
+      </div>
+      <div class="method-step">
+        <div class="step-num">6</div>
+        <div class="step-body">
+          <div class="step-title">Frases curtas</div>
+          <div class="step-desc">Das palavras soltas pra frases completas com significado real.</div>
+          <span class="step-time">⏱ 10 dias</span>
+        </div>
+      </div>
+      <div class="method-step">
+        <div class="step-num">7</div>
+        <div class="step-body">
+          <div class="step-title">Leitura fluente</div>
+          <div class="step-desc">Livrinhos infantis, gibis, rótulos — o mundo inteiro vira texto pra ler.</div>
+          <span class="step-time">⏱ Contínuo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= ENTREGÁVEIS ======= -->
+<section class="fade-in">
+  <div class="container">
+    <span class="eyebrow">O que você recebe</span>
+    <h2 class="section-h">O método completo <em>na sua mão.</em></h2>
+    <p class="body-text">Com sua compra hoje você recebe o ebook principal — o passo a passo completo pra começar ainda hoje. E de bônus, um material emocional que vai te acompanhar nos dias difíceis.</p>
+
+    <div class="deliverables">
+
+      <div class="deliverable" style="border-color:var(--yellow);background:var(--yellow-light);">
+        <div class="del-badge">✓</div>
+        <div class="del-content">
+          <div class="del-eyebrow" style="color:var(--blue);">Incluso na compra</div>
+          <div class="del-title">Ebook Método Alfabetiza Casa</div>
+          <div class="del-desc">28 páginas. O método completo em 7 etapas, plano de 15 min/dia, como resolver cada tipo de travamento e o que falar (e o que nunca falar) na hora do estudo.</div>
+          <span class="del-tag">28 páginas · PDF · Acesso imediato</span>
+        </div>
+      </div>
+
+      <div class="deliverable" style="border-color:var(--yellow);background:var(--yellow-light);">
+        <div class="del-badge">🎁</div>
+        <div class="del-content">
+          <div class="del-eyebrow" style="color:var(--coral);">Bônus grátis</div>
+          <div class="del-title">Carta pra Mãe que Duvida</div>
+          <div class="del-desc">Um manifesto emocional pra ler naquele dia em que você quiser desistir. Guarda bem guardado — você vai precisar dele.</div>
+          <span class="del-tag" style="background:var(--coral-soft);color:var(--coral);">Grátis · Valor R$ 12</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-icon">➕</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <span class="eyebrow" style="background:var(--blue-light);color:var(--blue);">Complementos disponíveis</span>
+    <h2 class="section-h" style="margin-bottom:8px;">Quer ir <em>ainda mais longe?</em></h2>
+    <p class="body-text" style="margin-bottom:20px;">Após sua compra você terá a opção de adicionar esses materiais ao seu pedido — cada um desenhado pra uma etapa específica da jornada.</p>
+
+    <div class="deliverables">
+
+      <div class="deliverable">
+        <div class="del-badge" style="background:var(--blue-light);color:var(--blue);box-shadow:0 3px 0 #C7D2FE;">02</div>
+        <div class="del-content">
+          <div class="del-eyebrow">Complemento prático</div>
+          <div class="del-title">Caderno de Atividades Imprimíveis</div>
+          <div class="del-desc">30 exercícios prontos pra imprimir. Pontilhados, caça-letras, bingo das letras, jogo de sílabas e o Diploma de Leitor pra emoldurar quando terminar.</div>
+          <span class="del-tag">38 páginas · Imprimível P&B</span>
+        </div>
+      </div>
+
+      <div class="deliverable">
+        <div class="del-badge" style="background:var(--blue-light);color:var(--blue);box-shadow:0 3px 0 #C7D2FE;">03</div>
+        <div class="del-content">
+          <div class="del-eyebrow">Complemento de suporte</div>
+          <div class="del-title">Guia Rápido de Bolso + Diário de Progresso</div>
+          <div class="del-desc">O guia fica do lado na hora do estudo pra consulta rápida. O diário registra cada conquista dos 35 dias — e vira uma memória pra guardar pra sempre.</div>
+          <span class="del-tag">60 páginas · PDF</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ======= OFERTA ======= -->
+<section id="oferta" class="cream fade-in">
+  <div class="container">
+    <div class="offer-card">
+      <h3>Tudo isso hoje por:</h3>
+
+      <ul class="offer-list">
+        <li><strong>📘 Ebook Método Alfabetiza Casa</strong><span>R$ 47</span></li>
+        <li style="background:var(--yellow-light);padding:8px 6px;border-radius:8px;margin-top:6px;">
+          <strong>🎁 Bônus: Carta pra Mãe que Duvida</strong>
+          <span style="text-decoration:none;color:var(--coral);font-weight:900;font-size:13px;">GRÁTIS</span>
+        </li>
+      </ul>
+
+      <div class="price-area">
+        <div class="price-was">De R$ 59,00</div>
+        <div class="price-label">Hoje apenas</div>
+        <div class="price-now"><sup>R$</sup>27<sub>,00</sub></div>
+      </div>
+
+      <a href="https://pay.cakto.com.br/g65iu2v_857377"
+         class="btn-main"
+         onclick="fbq&&fbq('track','InitiateCheckout',{value:27,currency:'BRL'})">
+        SIM, QUERO GARANTIR MINHA VAGA
+        <small>🔒 Pagamento seguro · Acesso imediato após a compra</small>
+      </a>
+
+      <div class="payment-row">
+        💳 Cartão de crédito &nbsp;·&nbsp; 📱 Pix &nbsp;·&nbsp; 📄 Boleto bancário
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= GARANTIA ======= -->
+<section class="fade-in">
+  <div class="container">
+    <div class="guarantee">
+      <div class="guarantee-num">7</div>
+      <h3>Garantia total de 7 dias</h3>
+      <p>Aplica em casa com seu filho. Se em 7 dias você achar que não funciona pra vocês, devolvemos cada centavo. <strong>Sem perguntas, sem enrolação, sem burocracia.</strong> O risco é 100% nosso.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======= FAQ ======= -->
+<section class="cream fade-in">
+  <div class="container">
+    <span class="eyebrow">Dúvidas</span>
+    <h2 class="section-h" style="margin-bottom:24px;">Perguntas que outras <em>mães fizeram</em></h2>
+
+    <div class="faq">
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Funciona mesmo? Meu filho tem 7 anos e já repetiu de ano.</div>
+        <div class="faq-a"><p>Funciona exatamente pra esse caso. O método foi desenhado pra crianças com atraso — não pra acelerar as que já estão bem. Crianças mais velhas costumam avançar mais rápido porque têm maior maturidade. A repetência de ano não significa nada sobre a inteligência do seu filho.</p></div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Eu não tenho paciência. Vai funcionar assim?</div>
+        <div class="faq-a"><p>A falta de paciência geralmente vem da falta de estrutura — quando você não sabe o que fazer, qualquer erro parece um fracasso. Com o passo a passo na mão, você para de improvisar. A maioria das mães relata que o momento de estudo vira o melhor do dia com o filho.</p></div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Em quanto tempo vejo resultado?</div>
+        <div class="faq-a"><p>A maioria das mães vê progresso nítido em 7 a 14 dias. Leitura fluente entre 30 e 60 dias de aplicação consistente. 15 minutos todos os dias vale mais que 2 horas uma vez na semana.</p></div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Quando recebo o material?</div>
+        <div class="faq-a"><p>Na hora. Pix e cartão aprovam em segundos. Você recebe os arquivos por e-mail imediatamente e pode começar ainda hoje à tarde.</p></div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Preciso ser professora pra aplicar?</div>
+        <div class="faq-a"><p>Nenhuma formação necessária. O material foi feito especificamente pra mães sem conhecimento pedagógico. Cada etapa diz exatamente o que fazer, o que falar e como reagir quando errar.</p></div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">E se não funcionar pra mim?</div>
+        <div class="faq-a"><p>Você tem 7 dias de garantia total. Aplica com calma e, se não estiver satisfeita, manda um e-mail e devolvemos tudo. Sem questionamentos, sem formulário, sem burocracia.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= FINAL CTA EMOCIONAL ======= -->
+<section class="final-cta">
+  <div class="final-cta-inner container">
+
+    <p class="final-quote">
+      Daqui a 6 meses, seu filho vai estar <em>lendo fluentemente</em> —
+      ou ainda mais atrasado que os colegas.
+    </p>
+
+    <p class="final-sub">
+      A diferença entre esses dois futuros<br>
+      <strong>é o que você decide nos próximos 5 minutos.</strong>
+    </p>
+
+    <a href="https://pay.cakto.com.br/g65iu2v_857377"
+       class="btn-main"
+       onclick="fbq&&fbq('track','InitiateCheckout',{value:27,currency:'BRL'})">
+      QUERO MINHA VAGA POR R$ 27 AGORA
+      <small>🔒 Acesso imediato · Garantia de 7 dias</small>
+    </a>
+
+    <p style="font-size:12px;color:rgba(255,255,255,0.35);margin-top:20px;position:relative;z-index:2;">
+      Seu filho não pode esperar mais. Você também não.
+    </p>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p><strong style="color:white;opacity:1;">Mãe que Ensina · Alfabetiza Casa</strong></p>
+    <p>Todos os direitos reservados · 2026</p>
+    <p style="margin-top:8px;">Este site não é endossado pelo Facebook Inc. · <a href="#">Política de Privacidade</a></p>
+  </div>
+</footer>
+
+<script>
+// Timer
+(function(){
+  var el=document.getElementById('timer');
+  if(!el)return;
+  var t=23*3600+59*60+59;
+  setInterval(function(){
+    if(t<=0)return;t--;
+    var h=String(Math.floor(t/3600)).padStart(2,'0');
+    var m=String(Math.floor((t%3600)/60)).padStart(2,'0');
+    var s=String(t%60).padStart(2,'0');
+    el.textContent=h+':'+m+':'+s;
+  },1000);
+})();
+
+// Fade in on scroll
+(function(){
+  var els=document.querySelectorAll('.fade-in');
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:0.1});
+  els.forEach(function(el){io.observe(el);});
+})();
+
+// FAQ
+document.querySelectorAll('.faq-item').forEach(function(item){
+  item.addEventListener('click',function(){
+    this.classList.toggle('open');
+  });
+});
+
+// Pixel nos CTAs
+document.querySelectorAll('.btn-main').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    if(typeof fbq!=='undefined'){
+      fbq('track','InitiateCheckout',{
+        content_name:'Alfabetiza Casa',
+        value:27.00,currency:'BRL'
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
